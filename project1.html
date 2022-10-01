@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ .p1{
+    margin-top: 20px;
+ }
+ #p2{
+    background-color: bisque;
+ }
+</style>
+<body>
+    <h1>Random Content</h1>
+    <p class="p1">To see new content this page</p>
+    <p id="p2"></p>
+    <script>
+    let content=["Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur","Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur","Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur"];
+
+    let symbol=["1234","56677890","112334556"];
+
+    let random=Math.floor(Math.random()*content.length) ;
+    
+    document.getElementById("p2").innerHTML=content[random]+symbol[random];
+    </script>
+</body>
+</html>
