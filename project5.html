@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: blueviolet;
+        }
+        button{
+            width: 200px;
+            height: 40px;
+            border: 2px solid black;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+     <div class="Button"> <button onclick="change()">Change</button></div>
+     <p id="name"></p>
+     <script>
+        function change() {
+            let srting="abcdefgh1234567890";
+            let random1=Math.floor(Math.random()*srting.length);
+            let random2=Math.floor(Math.random()*srting.length);
+            let random3=Math.floor(Math.random()*srting.length);
+            let random4=Math.floor(Math.random()*srting.length);
+            let random5=Math.floor(Math.random()*srting.length);
+            let random6=Math.floor(Math.random()*srting.length);
+            document.body.style.backgroundColor="#"+srting[random1]+srting[random2]+srting[3]+srting[random4]+srting[random5]+srting[random6]
+            document.getElementById("name").innerHTML="#"+srting[random1]+srting[random2]+srting[3]+srting[random4]+srting[random5]+srting[random6]
+        }
+     </script>
+</body>
+</html>
