@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sorted Name</h1>
+    <input type="text" id="name" value=""><button onclick="validate()">Click</button><br>
+    <textarea name="" id="text" cols="30" rows="10" value></textarea>
+    <script>
+      let array=[]
+      function validate(){
+         let Name=document.getElementById("name").value;
+         array.push(Name)
+         array.sort()
+        document.getElementById("text").value=array.join("\n")
+      }
+    </script>
+</body>
+</html>
