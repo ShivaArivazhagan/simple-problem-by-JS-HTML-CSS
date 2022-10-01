@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <button onclick="edho_orufunc()">Click here</button>
+     <h1 id="sivasankar">This is Js</h1>
+     <script>
+        let i =0
+        let ref= document.getElementById("sivasankar")
+        function edho_orufunc(){
+            
+            i+=1
+            ref.firstChild.nodeValue = i
+            if(i==8){
+                document.body.style.backgroundColor = "red"
+            }
+            else if(i ==9){
+                document.body.style.backgroundColor ="blue"
+            }
+
+        }
+     </script>
+</body>
+</html>
