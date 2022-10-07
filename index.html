@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            position: relative;
+        }
+        .bubble {
+            position: absolute;
+            top: 150px;
+            left: 50px;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(7, 8, 8);
+            border-radius: 50%;
+        }
+        .arrow{
+            position: absolute;
+            top: 250px;
+            left: 40%;
+            height: 30px;
+        }
+        #arrow-Move{
+            animation-name: example;
+            animation-duration: 4s;
+        }
+        @keyframes example {
+
+             to {margin-left: -27%;}
+        }
+        .buttons{
+            margin-left: 40%;
+            margin-top: 30px;
+        }
+        .buttons button{
+            width: 50px;
+            height: 30px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <canvas id="myCanvas" style="border:1px solid #000000;width: 50%;">
+        </canvas>
+        <div class="bubble"></div>
+        <div>
+            <img class="arrow"  src="https://th.bing.com/th/id/R.36f662e63c026975829012ead909b3d4?rik=4M%2bdAcR72tFC6Q&riu=http%3a%2f%2fcliparts.co%2fcliparts%2fpc7%2frek%2fpc7rekLzi.png&ehk=WQLage4j8kj2M0T3fYZLpvOLic0DbM1PIv%2bl7iaDY9o%3d&risl=&pid=ImgRaw&r=0" alt="">
+        </div>
+    </div>
+   <div class="buttons">
+    <button onclick="changecol()">hit</button>
+     <a href="http://127.0.0.1:5500/index.html"><button>Reset</button></a>
+   </div>
+<script>
+    let bubbleWlement = document.querySelector(".bubble");
+    let arrowM= document.querySelector(".arrow")
+    function randomNumber (){
+       let collection = "ABCDEF1234567890"
+        collect= collection.split('')
+    function randomGen (collected) {
+    return Math.floor(Math.random()*collected.length)
+    }
+   let  colourName = '#'
+    for(i=0;i<6;i++){
+    colourName+= collect[randomGen(collect)]
+    }
+    return colourName
+    }
+    function changecol(){   
+        setTimeout(() => {
+            bubbleWlement.style.backgroundColor = randomNumber();;
+}, "4000")
+       arrowM.setAttribute('id',"arrow-Move")
+    }
+
+
+
+</script>
+</body>
+
+</html>
